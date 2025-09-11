@@ -13,9 +13,9 @@ st.write("Fill in the details below and click *Predict* to see the result.")
 respondent_type = st.selectbox("Respondent Type", ["Household", "Business", "Community"])
 household_size = st.number_input("Household Size", min_value=1, max_value=20, value=4)
 num_employees = st.number_input("Number of Employees", min_value=0, max_value=500, value=10)
-monthly_income = st.number_input("Monthly Household Income", min_value=0, max_value=1_000_000, value=50000)
-energy_source = st.selectbox("Energy Source", ["National Grid", "Solar", "Fossil generator", "Mixed sources"])
-willingness_to_pay = st.number_input("Willingness to Pay (₦)", min_value=0, max_value=1_000_000, value=20000)
+monthly_income = st.number_input("Monthly Household Income", min_value=0, max_value=1_000_000, value=50000, step = 1000)
+energy_source = st.selectbox("Energy Source", ["National Grid", "Solar", "Fossil generator", "Mixed sources", "National Grid + Solar","National Grid + Fossil generator","National Grid + Mixed sources"])
+willingness_to_pay = st.number_input("Willingness to Pay (₦)", min_value=0, max_value=1_000_000, value=20000, step=1000)
 
 
 # When user clicks button
